@@ -1,0 +1,35 @@
+{
+  "name": "atom-identify",
+  "version": "0.0.0",
+  "description": "Adds data attributes for editor and pane IDs to the respective HTML element",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --pretty --project ./",
+    "dev": "tsc --watch --pretty --project ./",
+    "lint": "tslint --project ./",
+    "test": "npm run lint"
+  },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idleberg/node-atom-identify.git"
+  },
+  "keywords": [
+    "atom",
+    "atom package"
+  ],
+  "dependencies": {
+    "@types/atom": "^1.36.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "husky": "^3.1.0",
+    "tslint": "^5.17.0",
+    "typescript": "^3.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
