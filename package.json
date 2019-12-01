@@ -1,6 +1,6 @@
 {
   "name": "atom-identify",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Adds data attributes for editor and pane IDs to the respective HTML element",
   "license": "MIT",
   "scripts": {
