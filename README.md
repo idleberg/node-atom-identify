@@ -31,7 +31,6 @@ export async function activate() {
 const identify = require "atom-identify"
 
 module.exports =
-
   activate: () ->
     identify()
 ```
