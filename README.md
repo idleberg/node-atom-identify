@@ -15,14 +15,25 @@ Adds data attributes for editor and pane IDs to the respective HTML element
 
 Import the module into your Atom package, then invoke it in your `activate` method
 
-**Example**:
+**Examples**:
 
 ```js
+// JavaScript
 import identify from 'atom-identify';
 
 export async function activate() {
     identify();
 };
+```
+
+```coffee
+# CoffeeScript
+const identify = require "atom-identify"
+
+module.exports =
+
+  activate: () ->
+    identify()
 ```
 
 ## License
