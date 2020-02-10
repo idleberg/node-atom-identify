@@ -11,22 +11,27 @@ function initIDs(): void {
 }
 
 function addEditorID(editor): void {
-  if (editor && editor.id) {
+  if (editor?.id) {
     const view: HTMLElement = atom.views.getView(editor);
+    const buffer = editor.buffer;
 
-    if (!view.getAttribute('data-editor-id')) {
+    if (editor?.id && !view.getAttribute('data-editor-id')) {
       if (atom.inDevMode()) console.log(`Add data-attribute for editor #${editor.id}`);
       view.setAttribute('data-editor-id', editor.id);
+    }
+
+    if (buffer.id && !view.getAttribute('data-buffer-id')) {
+      if (atom.inDevMode()) console.log(`Add data-attribute for buffer #${buffer.id}`);
+      view.setAttribute('data-buffer-id', editor.id);
     }
   }
 }
 
 function addPaneID(pane): void {
-  if (pane && pane.id) {
+  if (pane?.id) {
     const view: HTMLElement = atom.views.getView(pane);
 
     if (!view.getAttribute('data-pane-id')) {
-      if (atom.inDevMode()) console.log(`Add data-attribute for pane #${pane.id}`);
       view.setAttribute('data-pane-id', pane.id);
     }
   }
