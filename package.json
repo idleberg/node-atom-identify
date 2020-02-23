@@ -18,10 +18,9 @@
     "atom",
     "atom package"
   ],
-  "dependencies": {
-    "@types/atom": "^1.36.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@types/atom": "^1.36.2",
     "@types/node": "^13.7.0",
     "husky": "^4.2.1",
     "tslint": "^6.0.0",
